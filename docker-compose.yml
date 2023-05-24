@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  terragrunt:
+    image: alpine/terragrunt:latest
+    env_file: .env
+    volumes:
+      - $PWD/$IAC_DIR:/work
+      - $HOME/.aws:/root/.aws
+    working_dir: /work
+
+  envvars:
+    image: flemay/envvars:latest
+    env_file: .env
+    volumes:
+      - .:/work
+    working_dir: /work

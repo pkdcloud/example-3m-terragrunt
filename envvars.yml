@@ -1,0 +1,8 @@
+envvars:
+  - name: dir
+    desc: The deployment directory
+    optional: false
+
+  - name: AWS_PROFILE
+    desc: The AWS profile to use
+    optional: false
